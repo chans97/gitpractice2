@@ -1,3 +1,5 @@
+
+
 @font-face {
     font-family: 'RIDIBatang';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
@@ -5,10 +7,7 @@
     font-style: normal;
 }
 
-@font-face { font-family: 'Recipekorea'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff'); font-weight: normal; font-style: normal; }
-*{
-    font-family: 'Recipekorea', sans-serif;
-}
+
 .navbar-dark .navbar-toggler{
     border:none !important;
 }

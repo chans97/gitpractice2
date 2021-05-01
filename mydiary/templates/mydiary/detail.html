@@ -2,17 +2,14 @@
 {% load static %} 
 
 
-<section class="section">
-    <div class="inner">
-        <h3>일기 내용 자세히 보기</h3>
+<section class="section contentlist">
+    <div class="inner ">
+        <h3>리뷰 자세히 보기</h3>
     </div>
 </section>
 
-<section class="section">
-    <div class="inner">
-        <div class="row mt-5">
-            <div class="col-12">
-                <div class="form-group">
+<section class="section contentlist">
+    <div class="content">
                     <label for="title">제목</label>
                     <input type="text" class="form-control" id="title" value="{{post.title}}" readonly/>
                     {% if post.pub_date %}
@@ -27,14 +24,12 @@
                     <textarea class="form-control" readonly>{{post.highlight}}</textarea>
                     <label for="review">내용</label>
                     <textarea class="form-control" readonly>{{post.review}}</textarea>
-                </div>
-            </div>
-        </div>
+                
     </div>
 </section>
 
-<section class="section">
-    <div class="inner">
+<section class="section contentlist">
+    <div class="content mt-4">
         <a href="{% url 'edit' post.pk %}" class="btn btn-primary"> 수정하기 </a> <br>
         <a href="{% url 'delete' post.pk %}" class="btn btn-warning"> 삭제하기 </a> <br>
         <a href="{% url 'home' %}" class="btn btn-default"> 홈으로 돌아가기 </a> <br>
