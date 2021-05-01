@@ -1,1 +1,9 @@
-edit
+{% extends 'mydiary/base.html' %} {% block content %} {% load static %}
+<h1>입력</h1>
+<form method="POST" class="post-form" enctype="multipart/form-data">
+  {% csrf_token %} 
+  star<input type="number" name="star" value="3" required="" id="id_star"> highlight{{form.highlight}} review{{form.review}}
+
+  <button type="submit">저장하기</button>
+</form>
+{%endblock %}

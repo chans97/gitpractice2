@@ -14,3 +14,12 @@ class ContentForm(forms.ModelForm):
             "review",
         ]
 
+class ContentEditForm(forms.ModelForm):
+    class Meta:
+        model = Content
+        fields = [
+            "star",
+            "highlight",
+            "review",
+        ]
+
