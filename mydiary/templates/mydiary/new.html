@@ -1,13 +1,15 @@
 {% extends 'mydiary/base.html' %} {% block content %} {% load static %}
 <h1>입력</h1>
 <form method="POST" class="post-form" enctype="multipart/form-data">
-  {% csrf_token %} title{{form.title}} user{{form.user}} image{{form.image}}
-  star
-  <input type="number" name="star" value="" required="" id="id_star">
-  
-  
-   highlight{{form.highlight}} review{{form.review}}
+  {% csrf_token %} 
+  <input type="text" name="title" value="" required="" id="id_title" placeholder="영화 제목">
+  <input type="text" name="user" value="" required="" id="id_user"  placeholder="작성자">
+  <input type="number" name="star" value="" required="" id="id_star"  placeholder="이 영화의 별점은?">
+  <input type="text" name="highlight" maxlength="200" required="" id="id_highlight"  placeholder="이 영화의 명대사">
 
+  <textarea name="review" cols="40" rows="10" required="" id="id_review" placeholder="이 영화의 리뷰"></textarea>
+image{{form.image}}
   <button type="submit">저장하기</button>
+
 </form>
 {%endblock %}
