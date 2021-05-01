@@ -44,7 +44,7 @@ def edit(request, pk):
             return redirect("detail", pk=post.pk)
     else:
         form = ContentEditForm(instance=post)
-        return render(request, "mydiary/edit.html", {"form": form})
+        return render(request, "mydiary/edit.html", {"post":post, "form": form})
 
 
 def delete(request, pk):

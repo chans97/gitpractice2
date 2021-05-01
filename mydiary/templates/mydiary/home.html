@@ -32,8 +32,13 @@
         <a href="{% url 'new' %}" class="btn btn-primary">리뷰 작성하기</a>
     </div>
 </section>
+<div class="contentlist">
+            <div class="border-line-s"></div>
+</div>
+
 
 <!-- 게시판 부분 -->
+
 <section class="section" style="padding:30px;">
     <div class=" contentlist" >
             
@@ -53,10 +58,10 @@
                     <span class="review">
                     {{post.review}}</span>
                 </div>
+            <div class="border-line"></div>
            </div>
-            
             {%endfor%}
-        <a href="{% url 'home' %}" class="btn btn-primary"> 홈으로 이동</a> <br>
+        <a href="{% url 'home' %}" class="btn btn-primary"> 새로고침</a> <br>
     </div>
 </section>
 
