@@ -5,23 +5,29 @@
 
 <form method="POST" class="post-form" enctype="multipart/form-data">
 
-{% for field in form %}
+{% csrf_token %} 
 
+{% for field in form %}
 <div class="form-group">
 {% if field.name == 'review'%} 
   <label for="{{ field.id_for_label }}">리뷰</label>
   {{ field.field.widget.name }}
 
-  
+  <div class="form-class">
   {{field}}
+  </div>
   {% elif field.name == 'star'%}
    <label for="{{ field.id_for_label }}">별점(5점 만점)</label>
   {{ field.field.widget.name }}
-  <input type="number" name="star" value="3" required="" id="id_star">
+<div class="form-class">
+  {{field}}
+  </div>
   {% else %}
    <label for="{{ field.id_for_label }}">명대사</label>
   {{ field.field.widget.name }}
- {{field}}
+ <div class="form-class">
+  {{field}}
+  </div>
   {% endif %}
 
 </div>
