@@ -8,7 +8,7 @@ from django.shortcuts import get_object_or_404
 
 
 def home(request):
-    posts = Content.objects.all()
+    posts = Content.objects.all().order_by('-pub_date')
     return render(request, "mydiary/home.html", {"posts_list": posts})
 
 
