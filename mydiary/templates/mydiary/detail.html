@@ -10,6 +10,7 @@
 
 <section class="section contentlist">
     <div class="content">
+    <img src="{{post.image.url}}" alt="" srcset="" class="image">
                     <label for="title">제목</label>
                     <input type="text" class="form-control" id="title" value="{{post.title}}" readonly/>
                     {% if post.pub_date %}
@@ -18,12 +19,12 @@
                     {% endif %}
                     <label for="star">별점</label>
                     <input type="text" class="form-control" id="star" value="{{post.star}}" readonly/>
-                    <label for="image">이미지</label>
-                    <img src="{{post.image.url}}" alt="" srcset="" style="width: 100px;">
+                    
+                    
                     <label for="highlight">명대사</label>
                     <textarea class="form-control" readonly>{{post.highlight}}</textarea>
                     <label for="review">내용</label>
-                    <textarea class="form-control" readonly>{{post.review}}</textarea>
+                    <textarea class="form-control" id="textarea" readonly>{{post.review}}</textarea>
                 
     </div>
 </section>
@@ -31,7 +32,7 @@
 <section class="section contentlist">
     <div class="content mt-4">
         <a href="{% url 'edit' post.pk %}" class="btn btn-primary"> 수정하기 </a> <br>
-        <a href="{% url 'delete' post.pk %}" class="btn btn-warning"> 삭제하기 </a> <br>
+        <a href="{% url 'deleteensure' post.pk %}" class="btn btn-warning"> 삭제하기 </a> <br>
         <a href="{% url 'home' %}" class="btn btn-default"> 홈으로 돌아가기 </a> <br>
     </div>
 </section>
