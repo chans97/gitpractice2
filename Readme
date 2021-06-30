@@ -3,4 +3,4 @@ git clone 이후 runserver까지 해야할 일
 2. source myvenv/Scripts/activate
 3. pip install django
 4. pip install pillow
-
+123
