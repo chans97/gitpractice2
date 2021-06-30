@@ -12,3 +12,4 @@ media
 myvenv/
 # secrets Number
 secrets.json
+secret.json
